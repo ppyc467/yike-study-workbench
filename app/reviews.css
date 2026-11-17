@@ -1,0 +1,42 @@
+.review-panel { margin-top: 24px; padding: 24px; min-width: 0; }
+.review-panel[hidden] { display: none; }
+.review-panel .card-topline { flex-wrap: wrap; gap: 12px; }
+.review-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 16px 0; }
+.review-filters label { display: flex; align-items: center; gap: 8px; }
+.review-filters select, .quiz-composer select, .quiz-composer textarea, .review-card textarea, .resume-step-form textarea { font: inherit; width: 100%; min-width: 0; border: 1px solid var(--border, #dce3d7); border-radius: 10px; padding: 10px 12px; background: var(--surface, #fffefb); color: inherit; }
+.review-filters select { width: auto; max-width: 240px; }
+.review-summary { color: var(--muted-foreground, #677266); font-size: 13px; margin: 12px 0; line-height: 1.7; }
+.review-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.review-card { min-width: 0; border: 1px solid var(--border, #dce3d7); border-radius: 14px; padding: 18px; }
+.review-card h3 { font-size: 15px; line-height: 1.6; margin: 10px 0 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.review-meta { color: var(--muted-foreground, #677266); font-size: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+.review-card label, .quiz-composer label, .resume-step-form label { display: grid; gap: 7px; font-size: 13px; margin: 12px 0; }
+.review-card textarea { resize: vertical; min-height: 100px; }
+.review-answer { border-top: 1px solid var(--border, #dce3d7); margin-top: 16px; padding-top: 10px; }
+.review-ratings { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.review-ratings button { flex: 1; min-width: 86px; display: grid; justify-items: center; gap: 4px; }
+.review-ratings small { font-size: 11px; font-weight: normal; }
+.review-card-footer { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 12px; }
+.review-error { color: #a34432; font-size: 13px; margin: 10px 0; }
+.quiz-composer { border: 1px solid var(--border, #dce3d7); border-radius: 12px; padding: 14px; margin: 14px 0; min-width: 0; }
+.quiz-composer summary { cursor: pointer; font-size: 14px; font-weight: 600; min-height: 28px; }
+.quiz-composer textarea { min-height: 84px; resize: vertical; }
+.quiz-composer fieldset { border: 0; border-top: 1px solid var(--border, #dce3d7); padding: 12px 0 0; margin: 12px 0; min-width: 0; }
+.quiz-composer legend { padding-top: 8px; font-size: 12px; }
+.quiz-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.quiz-note-entry { margin: 12px 0 0; }
+.resume-step-form { border: 1px solid var(--border, #dce3d7); background: #f4f7ef; border-radius: 12px; padding: 14px; margin: 16px 0; }
+.resume-step-form h3 { margin: 0; font-size: 14px; }
+.resume-step-form .quiz-actions { justify-content: flex-end; }
+.timer-next-step { font-size: 13px; color: var(--muted-foreground, #677266); padding: 8px 12px; margin: 0 0 12px; background: #f4f7ef; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; text-align: left; }
+@media (max-width: 700px) {
+  .review-panel { padding: 18px 14px; }
+  .main-content > .review-panel { order: 6; }
+  .review-list { grid-template-columns: minmax(0, 1fr); }
+  .review-filters { align-items: stretch; }
+  .review-filters label { width: 100%; flex-wrap: wrap; }
+  .review-filters select { flex: 1; max-width: 100%; }
+  .review-ratings button, .quiz-actions button { min-height: 44px; }
+  .quiz-composer summary { min-height: 44px; }
+  .review-panel select, .review-panel textarea, .quiz-composer select, .quiz-composer textarea, .resume-step-form textarea { font-size: 16px; }
+}

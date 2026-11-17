@@ -1,0 +1,148 @@
+.markdown-document {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--foreground);
+  font-size: 16px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.markdown-document > :first-child { margin-top: 0; }
+.markdown-document > :last-child { margin-bottom: 0; }
+.markdown-document p { margin: 0 0 1.2em; }
+.markdown-document :is(h1, h2, h3, h4, h5, h6) {
+  margin: 1.9em 0 .7em;
+  color: var(--foreground);
+  font-weight: 650;
+  line-height: 1.5;
+  scroll-margin-top: 36px;
+}
+.markdown-document h1 { font-size: 1.9em; letter-spacing: -.025em; }
+.markdown-document h2 { font-size: 1.5em; padding-bottom: .35em; border-bottom: 1px solid var(--border); }
+.markdown-document h3 { font-size: 1.2em; }
+.markdown-document :is(h4, h5, h6) { font-size: 1em; }
+.markdown-document strong { font-weight: 650; }
+.markdown-document a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.markdown-document a:hover { color: #254d38; }
+.markdown-document :is(ul, ol) { margin: .6em 0 1.2em; padding-left: 1.7em; }
+.markdown-document ul { list-style: disc; }
+.markdown-document ol { list-style: decimal; }
+.markdown-document li { margin: .35em 0; padding-left: .15em; }
+.markdown-document li > p { margin: .45em 0; }
+.markdown-document li :is(ul, ol) { margin: .35em 0; }
+.markdown-document .contains-task-list { list-style: none; padding-left: .2em; }
+.markdown-document .task-list-item input {
+  width: 16px;
+  height: 16px;
+  margin: 0 .6em 0 0;
+  padding: 0;
+  vertical-align: -.12em;
+  accent-color: var(--primary);
+}
+.markdown-document blockquote {
+  margin: 1.4em 0;
+  border-left: 3px solid #9aaf89;
+  padding: .8em 1.2em;
+  border-radius: 0 8px 8px 0;
+  background: #f3f6ee;
+  color: #526550;
+}
+.markdown-document blockquote > :last-child { margin-bottom: 0; }
+.markdown-document hr { margin: 2em 0; border: 0; border-top: 1px solid var(--border); }
+.markdown-document mark { padding: .1em .18em; border-radius: 3px; background: #f3e8ab; color: #463e1c; box-decoration-break: clone; }
+.markdown-document :not(pre) > code {
+  padding: .15em .38em;
+  border-radius: 5px;
+  background: #edf2e9;
+  color: #3c6248;
+  font-size: .88em;
+  font-family: "IBM Plex Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+  overflow-wrap: anywhere;
+}
+.markdown-document .markdown-code-block {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  margin: 1.3em 0;
+  border: 1px solid #dfe5da;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7f9f4;
+}
+.markdown-document .markdown-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 12px 0 18px;
+  border-bottom: 1px solid #e2e8dd;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.markdown-document .markdown-code-header > span { min-width: 0; overflow-wrap: anywhere; }
+.markdown-document .markdown-code-header button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 8px;
+  border-radius: 6px;
+  color: var(--primary);
+}
+.markdown-document .markdown-code-header button:hover { background: #e9efe3; }
+.markdown-document pre {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  font-size: 13px;
+  line-height: 1.85;
+  tab-size: 4;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+.markdown-document pre > code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #293c32;
+  font-family: "IBM Plex Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+  font-size: inherit;
+}
+.markdown-document .markdown-copy-error { margin: 0; padding: 0 18px 12px; color: var(--destructive); font-size: 12px; }
+.markdown-document .hljs-comment, .markdown-document .hljs-quote { color: #657668; font-style: italic; }
+.markdown-document .hljs-keyword, .markdown-document .hljs-selector-tag, .markdown-document .hljs-literal { color: #954765; }
+.markdown-document .hljs-string, .markdown-document .hljs-regexp, .markdown-document .hljs-addition { color: #2a7251; }
+.markdown-document .hljs-number, .markdown-document .hljs-symbol, .markdown-document .hljs-attr { color: #8d551e; }
+.markdown-document .hljs-title, .markdown-document .hljs-section { color: #375c96; }
+.markdown-document .hljs-built_in, .markdown-document .hljs-type { color: #75529a; }
+.markdown-document .hljs-variable, .markdown-document .hljs-params { color: #435548; }
+.markdown-document .hljs-meta { color: #496984; }
+.markdown-document .hljs-deletion { color: #a13b3b; }
+.markdown-document .markdown-table-scroll { width: 100%; max-width: 100%; margin: 1.3em 0; overflow-x: auto; overscroll-behavior-x: contain; border: 1px solid var(--border); border-radius: 9px; }
+.markdown-document table { width: max-content; min-width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; }
+.markdown-document :is(th, td) { padding: 10px 16px; text-align: left; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.markdown-document th { background: #edf2e7; font-weight: 600; }
+.markdown-document tbody tr:nth-child(even) { background: #f8faf5; }
+.markdown-document tr > :last-child { border-right: 0; }
+.markdown-document tbody tr:last-child td { border-bottom: 0; }
+.markdown-document img { display: block; max-width: 100%; height: auto; margin: 1em auto; border-radius: 8px; }
+.markdown-document .footnotes { margin-top: 2em; color: var(--muted-foreground); font-size: 14px; }
+
+@media (max-width: 700px) {
+  .markdown-document { font-size: 16px; line-height: 1.9; }
+  .markdown-document h1 { font-size: 1.65em; }
+  .markdown-document h2 { font-size: 1.35em; }
+  .markdown-document :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 24px; }
+  .markdown-document pre { padding: 16px; font-size: 13px; }
+  .markdown-document blockquote { padding: .75em 1em; }
+}

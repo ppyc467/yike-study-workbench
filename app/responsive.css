@@ -1,0 +1,453 @@
+/* Keep content columns shrinkable before adapting labels and controls. */
+.page-heading > div,
+.settings-card,
+.setting-info > div,
+.history-summary > div,
+.history-detail,
+.project-stat > span,
+.settings-project-form > div,
+.settings-project-form input {
+  min-width: 0;
+}
+
+.settings-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.settings-projects > span {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.settings-projects i,
+.setting-info > svg,
+.project-link > span:last-child {
+  flex-shrink: 0;
+}
+
+.settings-project-form input {
+  flex: 1;
+  width: 0;
+}
+
+.settings-project-form button,
+.account-setting a,
+.timer-controls button {
+  white-space: nowrap;
+}
+
+.sidebar-project-heading {
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+
+.sidebar {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b6c3ab transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #b6c3ab;
+  border-radius: 6px;
+}
+
+@media (min-width: 701px) and (max-height: 900px) {
+  .sidebar .brand {
+    margin-bottom: 28px;
+  }
+
+  .sidebar-project-heading {
+    margin-top: 24px;
+  }
+
+  .sidebar-bottom {
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: 701px) and (max-height: 760px) {
+  .gentle-note {
+    display: none;
+  }
+}
+
+.sidebar > * {
+  flex-shrink: 0;
+}
+
+.project-navigation {
+  max-height: none;
+  overflow: visible;
+}
+
+.sidebar-project-heading .sidebar-caption {
+  white-space: nowrap;
+}
+
+.sidebar-project-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.sidebar-project-actions button {
+  min-width: 44px;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.project-stat {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-stat > span,
+.stats-project-label > span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  line-height: 1.7;
+}
+
+.project-stat i,
+.stats-project-label i {
+  display: inline-block;
+  margin: 0 7px 1px 0;
+  vertical-align: baseline;
+}
+
+.project-stat strong {
+  flex-shrink: 0;
+  line-height: 1.7;
+}
+
+.history-detail h3,
+.stats-task-name > strong {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.history-project {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-project i {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+
+.history-detail p > .history-project,
+.history-detail p > .history-session-meta {
+  color: var(--muted-foreground);
+}
+
+.history-session-meta {
+  white-space: normal;
+}
+
+.history-duration strong,
+.stats-task-duration {
+  white-space: nowrap;
+}
+
+.stats-task-name p > span:not(.stats-archived-label) {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stats-project-label > span {
+  min-width: 0;
+  flex: 1;
+}
+
+.stats-task-duration {
+  max-width: none;
+}
+
+.stats-day-value {
+  width: 100%;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0 4px;
+}
+
+.stats-day-value > span {
+  white-space: nowrap;
+}
+
+.workspace-footer {
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.timer-controls {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 950px) {
+  .settings-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .page-heading {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .page-heading > div {
+    flex: 1 1 235px;
+  }
+
+  .page-heading .date-chip {
+    flex-shrink: 0;
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .mobile-today-summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 8px;
+  }
+
+  .mobile-today-summary > div:first-child {
+    display: block;
+  }
+
+  .mobile-today-summary strong {
+    display: block;
+    font-size: 18px;
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+
+  .mobile-today-goal {
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .mobile-today-goal > span {
+    font-size: 12px;
+    line-height: 1.6;
+    text-wrap: balance;
+  }
+
+  .mobile-today-goal .text-button {
+    min-width: 44px;
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .timer-controls:has(> .secondary-button) {
+    width: 100%;
+    max-width: 300px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .timer-controls:has(> .secondary-button) .timer-start {
+    flex: 1;
+    min-width: 0;
+    padding-inline: 16px;
+  }
+
+  .timer-controls > .secondary-button {
+    flex-shrink: 0;
+  }
+
+  .task-management .new-task-project {
+    flex: 1 1 100%;
+  }
+
+  .history-row {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr) 44px;
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 8px;
+  }
+
+  .history-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-top: 3px;
+  }
+
+  .history-detail {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .history-detail p {
+    gap: 4px 8px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .history-duration {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    max-width: none;
+    text-align: left;
+  }
+
+  .history-duration strong {
+    font-size: 13px;
+  }
+
+  .history-duration span {
+    margin-top: 0;
+    font-size: 12px;
+  }
+
+  .history-row > .icon-button {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .history-row > .correction-form {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .correction-form label,
+  .correction-form p {
+    font-size: 12px;
+  }
+
+  .settings-card > .secondary-button {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .settings-card > .secondary-button svg {
+    flex-shrink: 0;
+  }
+
+  .account-setting {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .account-setting > div {
+    flex: 1 1 150px;
+  }
+
+  .account-setting a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile-today-goal {
+    position: relative;
+    padding-right: 44px;
+    min-height: 44px;
+    max-width: 132px;
+  }
+
+  .mobile-today-goal > span {
+    white-space: normal;
+  }
+
+  .mobile-today-goal .text-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .stats-project-label {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .stats-project-label strong {
+    max-width: none;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .stats-task-list > li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 8px 10px;
+  }
+
+  .stats-task-rank {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .stats-task-name {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .stats-task-duration {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-heading > div {
+    flex-basis: 100%;
+  }
+
+  .page-heading .date-chip {
+    font-size: 11px;
+  }
+
+  .mobile-today-summary {
+    padding-inline: 10px;
+    column-gap: 6px;
+  }
+
+  .mobile-today-goal {
+    max-width: 128px;
+  }
+
+  .stats-metric-duration .stats-less-than-minute {
+    font-size: 16px;
+  }
+}

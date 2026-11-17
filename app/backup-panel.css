@@ -1,0 +1,17 @@
+.backup-panel { margin-top: 24px; border-top: 1px solid var(--border, #e4e7df); padding-top: 20px; }
+.backup-panel h3, .sync-differences h2 { font-size: 16px; margin: 0 0 10px; }
+.backup-panel p { line-height: 1.7; font-size: 13px; overflow-wrap: anywhere; }
+.backup-file-label, .backup-preview { display: grid; gap: 12px; font-size: 13px; }
+.backup-file-label input { max-width: 100%; min-width: 0; }
+.backup-preview { margin-top: 16px; }
+.backup-preview label { display: flex; gap: 9px; align-items: flex-start; overflow-wrap: anywhere; }
+.backup-preview input[type="checkbox"] { flex-shrink: 0; margin-top: 3px; }
+.backup-task-options { display: grid; gap: 10px; max-height: 220px; overflow: auto; }
+.sync-differences { padding: 20px; margin-bottom: 20px; }
+.sync-differences details { margin: 12px 0; border-top: 1px solid #e4e7df; padding-top: 12px; }
+.sync-differences summary { cursor: pointer; overflow-wrap: anywhere; }
+.sync-difference-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.sync-difference-columns > div { min-width: 0; }
+.sync-difference-columns h3 { font-size: 13px; }
+.sync-difference-columns pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 240px; overflow: auto; font: 13px/1.6 inherit; background: #f4f5f0; padding: 12px; border-radius: 8px; }
+@media (max-width: 600px) { .sync-difference-columns { grid-template-columns: 1fr; gap: 4px; } }

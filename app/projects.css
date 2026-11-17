@@ -1,0 +1,46 @@
+.project-manager{min-width:0;margin:24px 0 20px;color:var(--foreground)}
+.project-manager-heading{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+.project-manager-heading h3{display:flex;align-items:center;gap:8px;min-width:0;font-size:15px;line-height:1.6;scroll-margin-top:24px}
+.project-manager-heading h3:focus-visible{outline:2px solid var(--primary);outline-offset:5px;border-radius:4px}
+.project-manager-heading>span{font-size:12px;white-space:nowrap;color:var(--muted-foreground)}
+.project-manager-intro,.project-manager-help,.project-manager-last,.project-manager-footnote{font-size:12px;line-height:1.8;color:var(--muted-foreground);overflow-wrap:anywhere}
+.project-manager-intro{margin-top:7px}
+.project-manager-list{list-style:none;margin:14px 0 0;padding:0;min-width:0}
+.project-manager-item{padding:13px 0;border-bottom:1px solid var(--border);min-width:0}
+.project-manager-item:first-child{border-top:1px solid var(--border)}
+.project-manager-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;min-width:0}
+.project-manager-identity{display:flex;align-items:center;gap:10px;flex:1 1 180px;min-width:0}
+.project-manager-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
+.project-manager-identity>div{min-width:0;flex:1}
+.project-manager-identity strong{display:block;font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.project-manager-identity p{font-size:12px;color:var(--muted-foreground);line-height:1.8;overflow-wrap:anywhere}
+.project-manager-actions{display:flex;align-items:center;gap:6px;flex-shrink:0;margin-left:auto}
+.project-manager button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;min-width:44px;padding:9px 11px;border-radius:8px;font-size:13px;line-height:1.5;white-space:nowrap;color:var(--primary)}
+.project-manager button:hover:not(:disabled){background:var(--muted)}
+.project-manager .project-manager-delete{color:#a93737}
+.project-manager .project-manager-delete:hover:not(:disabled){background:#fbefed}
+.project-manager-editor{margin-top:10px;padding:16px;border:1px solid var(--border);border-radius:10px;background:var(--background);min-width:0}
+.project-manager-editor label{display:flex;align-items:center;gap:6px;margin-bottom:7px;font-size:13px;font-weight:600}
+.project-manager-editor input,.project-manager-editor select{display:block;width:100%;max-width:100%;min-width:0;min-height:44px;font-size:16px}
+.project-manager-editor select{text-overflow:ellipsis}
+.project-manager-help{margin-top:7px}
+.project-manager-form-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin-top:13px}
+.project-manager .project-manager-primary{background:var(--primary);color:var(--primary-foreground)}
+.project-manager .project-manager-primary:hover:not(:disabled){background:#315943}
+.project-manager .project-manager-danger{background:#a93737;color:#fff}
+.project-manager .project-manager-danger:hover:not(:disabled){background:#8d2d2d}
+.project-manager-confirm h4{margin:0;font-size:14px;line-height:1.6;font-weight:600;color:var(--foreground)}
+.project-manager-confirm-name{font-size:13px;line-height:1.8;overflow-wrap:anywhere;margin-top:5px;color:var(--foreground)}
+.project-manager-confirm label{margin-top:14px}
+.project-manager-last{margin-top:13px}
+.project-manager-footnote{margin-top:13px;font-size:11px}
+@media(max-width:700px){
+  .project-manager-heading h3{font-size:15px}
+  .project-manager-intro,.project-manager-help,.project-manager-last{font-size:13px}
+  .project-manager-editor{padding:12px}
+  .project-manager-identity{flex-basis:100%}
+  .project-manager-actions{margin-left:19px;gap:12px}
+  .project-manager-actions button{padding-inline:10px}
+  .project-manager-form-actions{gap:8px}
+  .project-manager-form-actions button{padding-inline:10px}
+}
